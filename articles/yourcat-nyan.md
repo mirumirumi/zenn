@@ -2,11 +2,11 @@
 title: "🐱 だけ限定のフォト共有サイトをつくったよ（Vue + SAM）"
 emoji: "🐾"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [個人開発, githubactions, aws, vue]
+topics: [vue, aws, githubactions, 個人開発]
 published: true
 ---
 
-猫の写真だけをアップロードできて、かつその表示は毎回ランダムで一期一会、というフォト共有サービスをつくってみたという話です。
+猫の写真だけをアップロードできて、かつその表示は毎回ランダムで一期一会、というフォト共有サービスをつくってみたという話。
 
 技術要素は
 
