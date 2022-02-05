@@ -109,9 +109,9 @@ https://github.com/xieranmaya/blog/issues/6
 
 ```vue
 <div class="photo-wrap">
-    <div class="photo" v-for="photo, index in photoArray" :key="photo" :style="{'width': photo.size.width * 200 / photo.size.height + 'px', 'flex-grow': photo.size.width * 200 / photo.size.height}">
-    <i :style="{'padding-bottom': photo.size.height / photo.size.width * 100 + '%'}"></i>
-    <img :src="photo.src" :alt="photo.title" @click="onClickPhoto(index)" @load="loaded(index)" crossorigin="Anonymous"/>
+  <div class="photo" v-for="photo, index in photoArray" :key="photo" :style="{'width': photo.size.width * 200 / photo.size.height + 'px', 'flex-grow': photo.size.width * 200 / photo.size.height}">
+  <i :style="{'padding-bottom': photo.size.height / photo.size.width * 100 + '%'}"></i>
+  <img :src="photo.src" :alt="photo.title" @click="onClickPhoto(index)" @load="loaded(index)" crossorigin="Anonymous"/>
 </div>
 ```
 
@@ -129,56 +129,35 @@ https://github.com/nextapps-de/spotlight
 
 ```js
 onClickPhoto(index) {
-    Spotlight.show(this.photos, {
-        index: index,
-        animation: "slide, fade",  // "play"
-        control: "zoom, close",
-        title: false,
-        // play: 3,  bug (http://github.com/nextapps-de/spotlight/issues/49)
-        onshow: (index) => {
-            Spotlight.addControl("dl-btn", (event) => {
-                execDownload(this.photos[index].src);
-            });
-        },
-        onclose: () => {
-            Spotlight.removeControl("dl-btn");
-        },
-    });
+  Spotlight.show(this.photos, {
+    index: index,
+    animation: "slide, fade",  // "play"
+    control: "zoom, close",
+    title: false,
+    // play: 3,  bug (http://github.com/nextapps-de/spotlight/issues/49)
+    onshow: (index) => {
+      Spotlight.addControl("dl-btn", (event) => {
+        execDownload(this.photos[index].src);
+      });
+    },
+    onclose: () => {
+      Spotlight.removeControl("dl-btn");
+    },
+  });
 },
 ```
 
 ### AWS SAM
 
-SAM は何度となく使ってきているので特に目新しいことはないのですが、初めて個人アカウントで環境分け、およびそれにともなう CI/CD パイプラインの構築を行いました。
+特に目新しいことはないので書くことはありません。localhost 用の開発環境とリリース用の本番環境とで区分して運用しています。
 
-実務では
-
-- 開発 (dev)
-- 検証 (stg)
-- 本番 (prd)
-
-と３つに分けるのがよくあるパターンですが、個人では真ん中は特に必要としないので
-
-- 開発 (dev)
-- 本番 (prd)
-
-としました。
-
-AWS が[規約](https://d1.awsstatic.com/legal/AWSFreeTierTerms/AWS%20Free%20Tier%20terms%20-%20JAPANESE%20%20%282018-08-14%29%20UPDATED.pdf)で定める「不当に無料利用枠を得ようとする行為」に該当しないか不安になるところですが、
-
-> お客様またはお客様の事業体が複数のアカウントを開設し、本オファー基づく追加特典を受けている場合、お客様は本オファーを受けることはできません。  
-
-[Discussion Forums](https://forums.aws.amazon.com/thread.jspa?messageID=381770) にて AWS 側が下記のような回答を正式に行っているのを発見したので安心です。
-
-> Creating multiple accounts is not against the terms of service. It is OK to have different accounts for test and production systems, for example, or for separate business units which have completely distinct email sending that doesn't overlap. However, attempting to circumvent service limits or policies is prohibited by the terms of service, and creating multiple accounts for the purpose of circumventing limits would be a violation of the TOS.
-
-というかごくごく普通のソリューションなので、それを個人でやることが咎められるのは考えにくいですね。
+それと、このアプリケーションに限らないインフラ管理のためのリソース類は Terraform で書いています。
 
 #### AWS Rekognition
 
-あと強いて言うなら [AWS Rekognition](https://aws.amazon.com/jp/rekognition/) は初めて使いました。
+強いて言うなら [AWS Rekognition](https://aws.amazon.com/jp/rekognition/) は初めて使いました。
 
-今回のような物体ラベルづけはもとより、顔認証や顔画像の一致度比較程度なら API １つでラクに使えるのは驚きでした。ほんでもってめっちゃ安いです。
+今回のような物体ラベルづけはもとより、顔認証や顔画像の一致度比較程度なら API １つでラクに使えるのは驚きでした。そんでもってめっちゃ安いです。
 
 例えばラベリングである `detect_labels()` は下記のように使います。
 
@@ -209,7 +188,7 @@ https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekog
 
 ### CI/CD
 
-今回は Code Build などは使わず GitHub Actions のみの運用としました。
+今回は CodeBuild などは使わず GitHub Actions のみの運用としました。
 
 理由は
 
