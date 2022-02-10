@@ -3,7 +3,7 @@ title: "「引っ越しするけど会社から歩いて10分圏内ってどこ�
 emoji: "🚚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [vue, gcp, 個人開発]
-published: false
+published: true
 ---
 
 こうです。
@@ -220,7 +220,7 @@ https://traveltime.com/
 
 ただ１つ決定的な問題があって、死ぬほど高いんですよね。
 
-なんと **40万円払いましたｗｗ**
+なんと **43万円払いましたｗｗ**
 
 ![](/images/pricing.png)
 *下に小さく「年払いしかないよ！」と邪悪なことが書いてある。*
