@@ -152,7 +152,7 @@ https://zenn.dev/azukiazusa/articles/676d88675e4e74
 
 これはつまり **子コンポーネント側でトップレベル await を使える** ということを意味しており、前述の setup 記法と組み合わせると本当に便利になります。
 
-公式からは「まだ仕様が安定していないので本番使用は控えてください」とアナウンス[されていますが](https://v3.ja.vuejs.org/guide/migration/suspense.html)、耐えきれず使ってしまいました。今後の動向を気にしておきます。
+公式からは「まだ仕様が安定していないので本番使用は控えてください」とアナウンス[されています](https://v3.ja.vuejs.org/guide/migration/suspense.html)が、耐えきれず使ってしまいました。今後の動向を気にしておきます。
 
 ### Teleport
 
