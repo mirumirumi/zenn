@@ -1,7 +1,7 @@
 ---
 title    : Nuxt 3 + AWS + GitHub(コンテンツ管理) で技術ブログをつくった
 emoji    : 🍊
-type     : tech # tech: 技術記事 / idea: アイデア
+type     : tech
 topics   : [nuxt3, aws, 個人開発]
 published: true
 ---

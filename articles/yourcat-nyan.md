@@ -1,7 +1,7 @@
 ---
 title: "ねこ限定のフォト共有サイトをつくったよ（Vue + SAM）"
 emoji: "🐾"
-type: "tech" # tech: 技術記事 / idea: アイデア
+type: "tech"
 topics: [vue, aws, githubactions, 個人開発]
 published: true
 ---

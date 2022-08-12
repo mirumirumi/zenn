@@ -1,7 +1,7 @@
 ---
 title: "「引っ越しするけど会社から歩いて10分圏内ってどこまで？」を調べるサービスをつくりました"
 emoji: "🚚"
-type: "tech" # tech: 技術記事 / idea: アイデア
+type: "tech"
 topics: [vue, gcp, 個人開発]
 published: true
 ---
