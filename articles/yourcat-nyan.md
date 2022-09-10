@@ -39,9 +39,9 @@ published: true
 使用したもの、および雑感です。  
 以下はリポジトリのリンク。
 
-https://github.com/mirumirumi/your-cat-vue
+https://github.com/mirumirumi/yourcat
 
-https://github.com/mirumirumi/your-cat-sam
+https://github.com/mirumirumi/yourcat-apis
 
 ### Vue
 
