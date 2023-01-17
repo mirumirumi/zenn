@@ -286,7 +286,7 @@ new google.maps.Map(document.getElementById("map") as HTMLElement, {
 
 「パスフレーズだけでセキュリティ担保できるの？」とか「その運用って継続性あるの？」とかはここでは割愛させていただきます。詳しくは別に記事を書いてあるのでご興味ある方はぜひどうぞ。
 
-https://mirumi.me/tech/231
+https://mirumi.tech/secret-manage-pub-repo
 
 ## おわりに
 
