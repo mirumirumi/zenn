@@ -207,7 +207,7 @@ const color = ref("#ff0000")
 
 後日追記：別のプロジェクトで Pinia をひと通り利用することができたので使い方をまとめた記事を書きました！
 
-https://mirumi.me/tech/316/
+https://mirumi.tech/vue-pinia
 
 ## 使用した API リソースなど
 
